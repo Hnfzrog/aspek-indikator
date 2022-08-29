@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatDividerModule, MatToolbarModule, MatIconModule, MatButtonModule, MatMenuModule, MatListModule } from '@angular/material';
+import { MatDividerModule, MatToolbarModule, MatIconModule, MatButtonModule, MatMenuModule, MatListModule, MatCheckboxChange, MatCheckboxModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 
@@ -12,6 +12,14 @@ import { HighchartsChartModule } from 'highcharts-angular';
 import { CardComponent } from './widgets/card/card.component';
 import { PieComponent } from './widgets/pie/pie.component';
 import { ModalCompComponent } from './modal-comp/modal-comp.component';
+import { AddDataSatuanComponent } from './add-data-satuan/add-data-satuan.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { EditDataSatuanComponent } from './edit-data-satuan/edit-data-satuan.component';
+import { HapusDataSatuanComponent } from './hapus-data-satuan/hapus-data-satuan.component';
+import { EditAspekComponent } from './edit-aspek/edit-aspek.component';
+import { HapusAspekComponent } from './hapus-aspek/hapus-aspek.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +29,12 @@ import { ModalCompComponent } from './modal-comp/modal-comp.component';
     AreaComponent,
     CardComponent,
     PieComponent,
-    ModalCompComponent
+    ModalCompComponent,
+    AddDataSatuanComponent,
+    EditDataSatuanComponent,
+    HapusDataSatuanComponent,
+    EditAspekComponent,
+    HapusAspekComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +46,12 @@ import { ModalCompComponent } from './modal-comp/modal-comp.component';
     MatMenuModule,
     MatListModule,
     RouterModule,
-    HighchartsChartModule
+    HighchartsChartModule,
+    MatFormFieldModule,
+    MatCheckboxModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   exports: [
     HeaderComponent,

@@ -1,0 +1,24 @@
+<div class="modal-header">
+    <h4 class="modal-title pull-left">Hapus aspek indikator</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">x</span>
+    </button>
+  </div>
+  <div class="modal-body">
+  <!-- <div>
+    <mat-icon>warning</mat-icon>
+  </div> -->
+    <i class="fa fa-exclamation-triangle" style="font-size: 100px; padding: 5px 230px; color:crimson;" aria-hidden="true"></i>
+    <h3 class="text-center">Peringatan</h3>
+    <h5 class="text-center">Apakah anda yakin untuk menghapus tabel berikut:</h5>
+      <div class="form-group">
+        <input type="text" class="form-control" [value]="data['name']">
+      </div>
+    </div>
+  <div class="modal-footer">
+    <div class="col-md-12 text-center">
+      <button type="button" class="btn btn-default btn-sm" (click)="modalRef.hide()">Batal</button>
+      <button type="button" class="btn btn-danger btn-sm" (click)="modalRef.hide()">Hapus</button>
+    </div>
+  </div>
+  

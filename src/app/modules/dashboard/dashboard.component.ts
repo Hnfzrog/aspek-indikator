@@ -3,22 +3,24 @@ import { DashboardService } from '../dashboard.service';
 import { MatTableDataSource, MatPaginator } from '@angular/material';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { ModalCompComponent } from 'src/app/shared/modal-comp/modal-comp.component';
+import { EditAspekComponent } from 'src/app/shared/edit-aspek/edit-aspek.component';
+import { HapusAspekComponent } from 'src/app/shared/hapus-aspek/hapus-aspek.component';
 
 export interface PeriodicElement {
   name: string;
   position: number;
-  symbol: string;
+  // symbol: string;
 }
 const ELEMENT_DATA: PeriodicElement[] = [
-  { position: 1, name: 'SKS', symbol: 'any'},
-  { position: 2, name: 'SKS', symbol: 'any'},
-  { position: 3, name: 'SKS', symbol: 'any'},
-  { position: 4, name: 'SKS', symbol: 'any'},
-  { position: 5, name: 'SKS', symbol: 'any'},
-  { position: 6, name: 'SKS', symbol: 'any'},
-  { position: 7, name: 'SKS',  symbol: 'any'},
-  { position: 8, name: 'SKS',  symbol: 'any'},
-  { position: 9, name: 'SKS',  symbol: 'any'},
+  { position: 1, name: 'SKS'},
+  { position: 2, name: 'SKS'},
+  { position: 3, name: 'SKS'},
+  { position: 4, name: 'SKS'},
+  { position: 5, name: 'SKS'},
+  { position: 6, name: 'SKS'},
+  { position: 7, name: 'SKS'},
+  { position: 8, name: 'SKS'},
+  { position: 9, name: 'SKS'},
  
 ];
 
@@ -65,6 +67,20 @@ export class DashboardComponent implements OnInit{
    }
 
    ngOnInit(): void {
+   }
+
+   onEditButtonClick(data:any) {
+    const initialState : any = {
+      data:data
+    };
+    this.modalRef = this.modalService.show(EditAspekComponent, {initialState: initialState})
+   }
+
+   onDeleteButtonClick(data:any) {
+    const initialState : any = {
+      data:data
+    };
+    this.modalRef = this.modalService.show(HapusAspekComponent, {initialState: initialState})
    }
 }
 

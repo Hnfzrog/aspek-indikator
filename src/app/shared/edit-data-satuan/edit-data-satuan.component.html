@@ -1,0 +1,39 @@
+<div class="modal-header">
+    <h4 class="modal-title pull-left">Edit data satuan target</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">x</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <form [formGroup]="formGroupX">
+        <div class="col-xs-12 col-12 col-md-6 form-group">
+          <label for="any">Nama satuan target</label>
+          <br>
+          <input type="text" class="form-control" formControlName="name">
+          <!--  -->
+          <!-- formControlName="name" -->
+        </div>
+        <div class="col-xs-12 col-12 col-md-6 form-group">
+          <label for="anyy">Aspek indikator</label>
+          <br>
+          <select type="text" class="form-control" formControlName="weight">
+            <option>Kuantitas</option>
+            <option>SKS</option>
+            <option>Kualitas</option>
+            <option>Kuantitas</option>
+            <option>Kuantitas</option>
+          </select>
+          <!--   -->
+          <!-- formControlName="weight" -->
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <div class="col-md-12 text-center">
+      <button type="button" class="btn btn-default btn-sm" (click)="modalRef.hide()">Batal</button>
+      <button type="button" class="btn btn-primary btn-sm" (click)="onSubmitClick()" [disabled]="!formGroupX.valid">Simpan</button>
+    </div>
+  </div>
+  
